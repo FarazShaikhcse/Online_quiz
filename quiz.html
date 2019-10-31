@@ -33,6 +33,68 @@ text-align: center;
   //text-align: center;
 width: 750px;
 }
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
 </style>
 </head>
 <body>
@@ -178,27 +240,33 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		for(letter in questions[i].answers){
 
 			// ...add an html radio button
-			answers.push('<div class="custom-control custom-radio">'+
-	                                  '<input type="radio" name="question'+i+'" value="'+letter+'" class="custom-control-input" id="question'+i+letter+'">'
-					+ '<label class="custom-control-label" for="question'+i+letter+'">'
+			answers.push('<label class="container">'+ 
+	                                  '<input type="radio" name="question'+i+'" value="'+letter+'" id="question'+i+letter+'" checked="checked">'
+					
                                          +letter + '). '
 					+ questions[i].answers[letter]
-				+ '</label>'+'</div>'+'<br>'
++'<span class="checkmark"></span>'
+				+ '</label>'+'<br>'
 			);
 		}
 
 		// add this question and its answers to the output
 		output.push( '<div class="card bg-secondary text-white shadow" id="q'+(i+1)+'">'+
 			'<div class="question card-header">' 
-       +(i+1)+'.'+ questions[i].question+'<div id="icon'+i+'">'+'</div>' +'</div>'+'</div>'+'<div class="card shadow p-4 mb-4 bg-white">'
-			+'<div class="answers card-body">' +answers.join('') +'</div>'+'</div>'+'<br><br><br>'
+       +(i+1)+'.'+ questions[i].question +'</div>'+'</div>'+'<div class="card shadow p-4 mb-4 bg-white">'
+			+'<div class="answers card-body" id="'+i+'">' +answers.join('') +'</div>'+'</div>'+'<br><br><br>'
 		);
+
 	}
 
 
 	// finally combine our output list into one string of html and put it on the page
 	quizContainer.innerHTML = output.join('');
-	}
+var r = document.getElementsByTagName("input");
+for(var i=0; i<40; i++){
+r[i].checked=false;
+}
+}
 
 	function showResults(questions, quizContainer, resultsContainer){
 		var answerContainers = quizContainer.querySelectorAll('.answers');
@@ -218,8 +286,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			// add to the number of correct answers
 			numCorrect++;
 			// color the answers green
-//document.getElementById("icon'+i+'").innerHTML="'<i class="fas fa-check">'+'</i>'";
+
 			answerContainers[i].style.color = 'green';
+
 		}
 		// if answer is wrong or blank
 		else{
@@ -238,7 +307,6 @@ y[i].disabled=true;
 	// show number of correct answers out of total
 	resultsContainer.innerHTML =  '<div class="alert alert-info"><strong>You have scored '+ numCorrect + ' out of ' + questions.length+'</strong></div>';
 
-window.alert('You have scored '+ numCorrect + ' out of ' + questions.length);
 
 
  var elem1 = document.getElementById('submit');

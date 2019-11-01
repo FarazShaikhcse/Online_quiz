@@ -33,8 +33,8 @@ input[type="email"],input[type="text"],input[type="password"] {
 <div class="card-header"><h3>Login</h3></div>
 <div class="card-body">
 <form action="valida.php" method="POST" class="form-group">
-<i class='fas fa-user'></i><input type="email" placeholder="Email Id" name="email"><br>
-<i class='fas fa-key'></i><input type="password" id="password-field" placeholder="Password" name="password"><span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span><br>
+<i class='fas fa-user'></i><input type="email" data-toggle="tooltip" data-placement="bottom" title="Enter Email" placeholder="Email Id" name="email"><br>
+<i class='fas fa-key'></i><input type="password" data-toggle="tooltip" data-placement="bottom" title="Enter Password" id="password-field" placeholder="Password" name="password"><span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span><br>
 <div class="btn-group">
 <input type="submit" class="btn btn-primary" value="Sign In"></div>
 </div>
@@ -59,6 +59,9 @@ else
 }
 ?>
 <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 $(".toggle-password").click(function() {
 
   $(this).toggleClass("fa-eye fa-eye-slash");

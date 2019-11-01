@@ -100,15 +100,19 @@ input[type="email"],input[type="password"] {
 <div class="card-header"><h3>Create an Acccount</h3>Fill in the form below to create an account</div>
 <div class="card-body">
 <form action="Validp.php" method="POST" class="form-group">
-<i class='fas fa-user'></i><input type="text" id="textspe" placeholder="First Name" name="FName">&nbsp;&nbsp;<input type="text" id="textspe" placeholder="Last Name" name="LName"><br>
-<i class='fa fa-envelope'></i><input type="email" placeholder="Email Id" name="email"><br>
-<i class='fas fa-lock'></i><input type="password" id="t1" placeholder="Password" name="pwd1"><br>
-<i class='fas fa-lock'></i><input type="text" id="t2" placeholder="Confirm Password" name="pwd2"><br>
+<i class='fas fa-user'></i><input type="text" data-toggle="tooltip" title="Enter First Name" data-placement="bottom" id="textspe" placeholder="First Name" name="FName">&nbsp;&nbsp;<input type="text" data-toggle="tooltip" title="Enter Last Name" data-placement="bottom" id="textspe" placeholder="Last Name" name="LName"><br>
+<i class='fa fa-envelope'></i><input type="email" data-toggle="tooltip" title="Enter Email Id" data-placement="bottom" placeholder="Email Id" name="email"><br>
+<i class='fas fa-lock'></i><input type="password" data-toggle="tooltip" title="Enter Password" data-placement="bottom" id="t1" placeholder="Password" name="pwd1"><br>
+<i class='fas fa-lock'></i><input type="text" id="t2" data-toggle="tooltip" title="Confirm your Password" data-placement="bottom" placeholder="Confirm Password" name="pwd2"><br>
 <div class="btn-group">
 <input type="submit" class="btn btn-primary" value="Create an Account"></div>
 </div>
 <div class="card-footer">
 Already have an account?<a href="http://localhost//LoginPage.php">Login</a></div></div></center></form>
-
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 </html>

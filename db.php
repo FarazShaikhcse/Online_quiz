@@ -18,7 +18,7 @@ VALUES (".$_SESSION['sera']".,1900,$q)";
 if ($conn->query($sql) === TRUE) {
     echo "Your marks has been recorded";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: You have already attempted this exam!"
 }
 
 $conn->close();

@@ -14,7 +14,7 @@
 <style>
 body{
 
-background-color: white;
+background-image: linear-gradient(to right bottom, #401d60, #423175, #42438a, #40569e, #3c69b1, #2e7cc2, #1c8fd1, #00a2de, #00b9e9, #00d0ef, #2be6f2, #5ffbf1);
 }
 h1{
 font-family: stencil;
@@ -151,9 +151,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		}
 
 		// add this question and its answers to the output
-		output.push( '<div class="card bg-secondary text-white shadow" id="q'+(i+1)+'">'+
+		output.push( '<div class="card bg-dark text-white shadow" id="q'+(i+1)+'">'+
 			'<div class="question card-header">' 
-       +(i+1)+'.'+ questions[i].question +'</div>'+'</div>'+'<div class="card shadow p-4 mb-4 bg-white">'
+       +(i+1)+'.'+ questions[i].question +'</div>'+'</div>'+'<div class="card shadow p-4 mb-4 bg-secondary text-white">'
 			+'<div class="answers card-body" id="'+i+'">' +answers.join('') +'</div>'+'</div>'+'<br><br><br>'
 		);
 

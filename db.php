@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO ATTEMPT (Userid,Examid,Mark)
-VALUES (20190501,1900,$q)";
+VALUES (".$_SESSION['sera']".,1900,$q)";
 
 if ($conn->query($sql) === TRUE) {
     echo "Your marks has been recorded";

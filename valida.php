@@ -12,7 +12,7 @@ session_destroy();
 }
 else{$psw=mysqli_fetch_array($pasw,MYSQLI_NUM);
 if(sha1($p)==$psw[0]){
-    $_SESSION["email"]=$psw[1];
+    $_SESSION["sera"]=$psw[1];
     header("Location:som1.php");
     exit;
 }

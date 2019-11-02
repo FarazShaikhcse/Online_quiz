@@ -1,3 +1,6 @@
+<?php
+session_start();
+<?
 <!DOCTYPEHTML>
 <html>
 <head><title>Login Page</title>

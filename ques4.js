@@ -70,7 +70,7 @@ var myQuestions = [
 		correctAnswer: 'd'
 	},
 {
-		question: "What will be the output of the following Python code?<br>>>>str="hello"<br>>>>str[:2]",
+		question: "What will be the output of the following Python code?<br>>>>str="+'"hello"'+"<br>>>>str[:2]",
 		answers: {
 			a: 'he',
 			b: 'lo',

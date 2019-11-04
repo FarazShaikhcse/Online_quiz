@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['exam']=1900;
+?>
 <!DOCTYPE html>
 <html>
 <head>

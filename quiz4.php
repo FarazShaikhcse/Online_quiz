@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['exam']=1902;
+$_SESSION['exam']=1904;
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@ $_SESSION['exam']=1902;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-<script src='ques2.js'></script>
+<script src='ques4.js'></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <style>
 body{
@@ -95,7 +95,7 @@ width: 750px;
 </style>
 </head>
 <body>
-<h1>Microprocessor</h1>
+<h1>Python</h1>
  <div class="card shadow p-4 mb-4 bg-white right">
     <div class="card-header">Questions</div>
 <div class="card-body">

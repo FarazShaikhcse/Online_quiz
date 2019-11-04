@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO ATTEMPT (Userid,Examid,Mark)
-VALUES (".$_SESSION['sera']".,1900,$q)";
+VALUES (".$_SESSION['sera']".,".$_SESSION['exam'].",$q)";
 
 if ($conn->query($sql) === TRUE) {
     echo "Your marks has been recorded";

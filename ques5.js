@@ -1,101 +1,101 @@
-var myQuestions = [
+﻿var myQuestions = [
 	{
-		question: "There are ________ tuples in finite state machine.",
+		question: "What does PHP stand for?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) Personal Home Page<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) Hypertext Preprocessor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) Pretext Hypertext Processor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv) Preprocessor Home Page",
 		answers: {
-			a: '4',
-			b: '5',
-			c: '6',
-                        d: 'unlimited'
+			a: 'Both i) and iii)',
+			b: 'Both ii) and iv)',
+			c: 'Only ii)',
+                        d: 'Both i) and ii)'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'd'
 	},
 	{
-		question: "Extended transition function is .",
+		question: "The filesize() function returns the file size in ___________",
 		answers: {
-			a: 'Q * Σ* -> Q',
-			b: 'Q * Σ -> Q',
-			c: 'Q* * Σ* -> Σ',
-                        d: 'Q * Σ -> Σ'
-		},
-		correctAnswer: 'a'
-	},
-{
-		question: "δ*(q,ya) is equivalent to .",
-		answers: {
-			a: 'δ((q,y),a)',
-			b: 'δ(δ*(q,y),a)',
-			c: 'δ(q,ya)',
-                        d: 'independent from δ notation'
+			a: ' bits',
+			b: 'bytes',
+			c: 'kilobytes',
+                        d: 'gigabytes'
 		},
 		correctAnswer: 'b'
 	},
 {
-		question: "Which of the following options is correct?<br>Statement 1: Initial State of NFA is Initial State of DFA.<br>Statement 2: The final state of DFA will be every combination of final state of NFA.",
+		question: "How should we add a single line comment in our PHP code? <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) /?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) //<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) #<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv) /* */",
 		answers: {
-			a: 'Statement 1 is true and Statement 2 is true',
-			b: 'Statement 1 is true and Statement 2 is false',
-			c: 'Statement 1 can be true and Statement 2 is true',
-                        d: 'Statement 1 is false and Statement 2 is also false'
-		},
-		correctAnswer: 'a'
-	}
-{
-		question: " Regular expression for all strings starts with ab and ends with bba is.",
-		answers: {
-			a: 'aba*b*bba',
-			b: 'X**y',
-			c: 'ab(a+b)*bba',
-            d: 'All of the mentioned'
+		    a: ' Only ii)',
+			b: 'i), iii) and iv)',
+			c: 'ii), iii) and iv)',
+                        d: 'Both ii) and iv)'
 		},
 		correctAnswer: 'c'
 	},
 {
-		question: "NFA, in its name has ’non-deterministic’ because of :",
+		question: "Which of the following PHP statement/statements will store 111 in variable num?<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i) int $num = 111;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii) int mum = 111;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii) $num = 111;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv) 111 = $num;",
 		answers: {
-			a: 'The result is undetermined',
-			b: 'The choice of path is non-deterministic',
-			c: 'The state to be transited next is non-deterministic',
-                        d: 'All of the mentioned'
+			a: 'Both i) and ii)',
+			b: 'i), ii), iii) and iv)',
+			c: 'Only iii)',
+                        d: 'Only i)'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'c'
 	},
 {
-		question: "Which among the following is false?<br>ε-closure of a subset S of Q is:",
+		question: "Which statement will output $x on the screen?",
 		answers: {
-			a: 'Every element of S ϵ Q',
-			b: 'For any q ϵ ε(S), every element of δ (q, ε) is in ε(S)',
-			c: 'No other element is in ε(S)',
-                        d: 'None of the mentioned'
-		},
-		correctAnswer: 'd'
-	},
-{
-		question: " e-transitions are",
-		answers: {
-			a: 'conditional',
-			b: 'unconditional',
-			c: 'input dependent',
-                        d: 'none of the mentioned'
-		},
-		correctAnswer: 'b'
-	},
-{
-		question: " For NFA with ε-moves, which among the following is correct?",
-		answers: {
-			a: 'Δ: Q X (∑ U {ε}) -> P(Q)',
-			b: 'Δ: Q X (∑) -> P(Q)',
-			c: 'Δ: Q X (∑*) -> P(Q)',
-                        d: 'All of the mentioned'
+			a: 'echo "\$x;"',
+			b: 'echo "$x;"',
+			c: 'echo "/$$x;"',
+            d: 'echo "$x;";'
 		},
 		correctAnswer: 'a'
 	},
 {
-		question: " According to the given transitions, which among the following are the epsilon closures of q1 for the given NFA?<br>Δ (q1, ε) = {q2, q3, q4}<br>Δ (q4, 1) =q1<br>Δ (q1, ε) =q1",
+		question: "Which one of the following function is capable of reading a specific number of characters from a file?",
 		answers: {
-			a: 'q4',
-			b: 'q2',
-			c: 'q1',
-                        d: 'q1, q2, q3, q4'
+			a: 'fgets()',
+			b: 'fget()',
+			c: 'fileget()',
+                        d: 'filegets()'
+		},
+		correctAnswer: 'a'
+	},
+{
+		question: "Which of the following PHP function will return true if a variable is an array or false if it is not an array?",
+		answers: {
+			a: 'this_array()',
+			b: 'is_array()',
+			c: 'do_array()',
+                        d: 'in_array()'
+		},
+		correctAnswer: 'b'
+	},
+{
+		question: "A function in PHP which starts with __ (double underscore) is known as __________",
+		answers: {
+			a: 'Magic Function',
+			b: 'Inbuilt Function',
+			c: 'Default Function',
+                        d: 'User Defined Function'
+		},
+		correctAnswer: 'a'
+	},
+{
+		question: "How to define a function in PHP?",
+		answers: {
+			a: 'function {function body}',
+			b: 'data type functionName(parameters) {function body}',
+			c: 'functionName(parameters) {function body}',
+                        d: 'function functionName(parameters) {function body}'
+		},
+		correctAnswer: 'd'
+	},
+{
+		question: "If a = 12 what will be returned when (a == 12) ? 5 : 1 is executed?",
+		answers: {
+			a: '12',
+			b: '1',
+			c: 'Error',
+                        d: '5'
 		},
 		correctAnswer: 'd'
 	}

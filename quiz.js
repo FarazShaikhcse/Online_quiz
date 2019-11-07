@@ -86,17 +86,18 @@ y[i].disabled=true;
 
 
 
- var elem1 = document.getElementById('submit');
+ var elem1 = document.getElementById('myModal');
  elem1.parentNode.removeChild(elem1);  //removes button
- //var elem2 = document.getElementById('time');
-// elem2.parentNode.removeChild(elem2); //removes timer
+ var elem2 = document.getElementById('sub');
+ elem2.parentNode.removeChild(elem2); //removes timer
 document.getElementById('time').innerHTML="<a href=# class='btn btn-primary'>Home <i class='fas fa-home'></i></a><br><br><div class=\"alert alert-info\"><strong>You have scored "+ numCorrect + " out of " + questions.length+"</strong></div>";
 
 var in1 =numCorrect;
 
 $.post('db.php', { mark: in1}, function(data) {
-    alert( data );})
+    })
 }
+
 	// show the questions
 	showQuestions(questions, quizContainer);
 var submitButton = document.getElementById('submit');
@@ -108,7 +109,7 @@ var submitButton = document.getElementById('submit');
 
 
 //timer section
-var sec = 30;
+var sec = 150;
 var time = setInterval(myTimer, 1000);
 
 function myTimer() {

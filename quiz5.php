@@ -2,6 +2,7 @@
 session_start();
 $_SESSION['exam']=1905;
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +10,10 @@ $_SESSION['exam']=1905;
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src='ques5.js'></script>
 <script src='quiz.js'></script>
@@ -118,7 +120,7 @@ width: 750px;
 <a href="#q8" class="btn btn-danger" id="b8">8</a><br><br>
 <a href="#q9" class="btn btn-danger" id="b9">9</a>
 <a href="#q10" class="btn btn-danger" id="b10">10</a><br><br>
-<button id="submit" class="btn btn-success">Finish attempt <i class="fas fa-check"></i></button>
+<button class="btn btn-success" data-toggle="modal" data-target="#myModal" id="sub">Finish attempt <i class="fas fa-check"></i></button>
 <div id="time" class="text-info">
 Time remaining: <span id="timer"></span>
 </div>
@@ -126,12 +128,40 @@ Time remaining: <span id="timer"></span>
 <div id="quiz" class="container center"></div>
 <div id="results"></div>
 <div id="res"></div>
+<div class="container">
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">PHP Quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Do you want to submit your answers?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" id="submit">Submit</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
 <script>
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+
 </script>
 </body>
 </html>

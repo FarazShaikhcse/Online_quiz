@@ -1,6 +1,13 @@
 <?php
 session_start();
 $_SESSION['exam']=1905;
+$d=mysqli_connect('localhost','root','','WEBPROJECT') or die("Error connecting to MySQL server.");
+$qer=mysqli_query($d,"select mark from ATTEMPT where UserId=".$_SESSION['user']." and ExamId=".$_SESSION['exam']."");
+if(mysqli_num_rows($qer)>0)
+{
+     header("Location:test.php");
+     exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,14 +60,12 @@ width: 750px;
   -ms-user-select: none;
   user-select: none;
 }
-
 /* Hide the browser's default radio button */
 .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-
 /* Create a custom radio button */
 .checkmark {
   position: absolute;
@@ -71,42 +76,37 @@ width: 750px;
   background-color: grey;
   border-radius: 50%;
 }
-
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: black;
 }
-
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #16FF00;
 }
-
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
-
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: black;
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: black;
 }
 </style>
 </head>
 <body>
-<h1>PHP</h1>
+<h1>Php</h1>
  <div class="card shadow p-4 mb-4 bg-dark right">
     <div class="card-header text-white bg-secondary">Questions</div>
 <div class="card-body">
@@ -158,10 +158,7 @@ Time remaining: <span id="timer"></span>
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
-
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-
-
 </script>
 </body>
 </html>

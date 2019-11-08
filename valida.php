@@ -4,16 +4,16 @@ $d=mysqli_connect('localhost','root','','WEBPROJECT') or die("Error connecting t
 if(isset($_POST["email"]) && isset($_POST["password"])){
 $e=$_POST["email"];
 $p=$_POST["password"];
-$pasw=mysqli_query($d,"select Password,UserId from DETAILS where EmailId='$e'");
+$pasw=mysqli_query($d,"select Password,UserId,FName,LName from DETAILS where EmailId='$e'");
 if(mysqli_num_rows($pasw)<0){
 echo "<h1>Invalid Email-Id</h1>";
-session_unset();
-session_destroy();
 }
 else{$psw=mysqli_fetch_array($pasw,MYSQLI_NUM);
 if(sha1($p)==$psw[0]){
-    $_SESSION["sera"]=$psw[1];
-    header("Location:som1.php");
+    $_SESSION["user"]=$psw[1];
+    $_SESSION["fname"]=$psw[2];
+    $_SESSION["lname"]=$psw[3];
+    header("Location:WebHome.php");
     exit;
 }
 else{

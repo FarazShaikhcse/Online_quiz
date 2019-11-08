@@ -1,6 +1,3 @@
-<?php
-session_start();
-<?
 <!DOCTYPEHTML>
 <html>
 <head><title>Login Page</title>
@@ -14,6 +11,10 @@ session_start();
 <style>
 input[type="password"] {
   -webkit-text-security: square;
+}
+ body{
+background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, #00c7ff, #00b9ff, #00aaff, #0099ff, #0085ff, #006eff, #0053ff, #002cff);
+
 }
 input[type="email"],input[type="text"],input[type="password"] {
     outline: none;
@@ -35,7 +36,7 @@ input[type="email"],input[type="text"],input[type="password"] {
 <div class="card bg-light text-dark" style="width: 35rem;">
 <div class="card-header"><h3>Login</h3></div>
 <div class="card-body">
-<form action="valida.php" method="POST" class="form-group">
+<form action="valida.php" method="POST" class="form-group" onsubmit="return checkForm(this);">
 <i class='fas fa-user'></i><input type="email" data-toggle="tooltip" data-placement="bottom" title="Enter Email" placeholder="Email Id" name="email"><br>
 <i class='fas fa-key'></i><input type="password" data-toggle="tooltip" data-placement="bottom" title="Enter Password" id="password-field" placeholder="Password" name="password"><span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span><br>
 <div class="btn-group">
@@ -43,25 +44,20 @@ input[type="email"],input[type="text"],input[type="password"] {
 </div>
 <div class="card-footer">
 Don't have an account?<a href="http://localhost//SignUp.php">Sign Up</a></div></div></center></form>
-<?php
-$d=mysqli_connect('localhost','root','','WEBPROJECT') or die("Error connecting to MySQL server.");
-if(isset($_POST["Name"]) && isset($_POST["Password"])){
-$e=$_POST["Name"];
-$p=$_POST["Password"];
-$pasw=mysqli_query($d,"select Password from DETAILS where EmailId='$e'");
-if(mysqli_num_rows($pasw)<0){
-echo "<h1>Invalid Email-Id</h1>";}
-else{$psw=mysqli_fetch_array($pasw,MYSQLI_NUM);
-if(sha1($p)==$psw[0]){
-echo "<h1>Successfull Login.</h1>";}
-else{echo "<h1>Invalid Password!</h1>";}
-}
-}
-else
-{ echo "";
-}
-?>
 <script>
+  function checkForm(form)
+  {
+    if(form.email.value == "") {
+      window.alert("Error: Email Id cannot be blank!");
+      form.email.focus();
+      return false;
+    }
+    if(form.password.value == "") {
+      window.alert("Error: Please enter the password");
+      form.password.focus();
+      return false;
+    }
+  }
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
 });

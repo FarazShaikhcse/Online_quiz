@@ -83,14 +83,14 @@ y[i].disabled=true;
 
 	// show number of correct answers out of total
 	resultsContainer.innerHTML =  '<div class="alert alert-info"><strong>You have scored '+ numCorrect + ' out of ' + questions.length+'</strong></div>';
-
-
-
- var elem1 = document.getElementById('myModal');
+    var elem1 = document.getElementById('myModal');
  elem1.parentNode.removeChild(elem1);  //removes button
  var elem2 = document.getElementById('sub');
  elem2.parentNode.removeChild(elem2); //removes timer
-document.getElementById('time').innerHTML="<a href=# class='btn btn-primary'>Home <i class='fas fa-home'></i></a><br><br><div class=\"alert alert-info\"><strong>You have scored "+ numCorrect + " out of " + questions.length+"</strong></div>";
+document.getElementById('time').innerHTML="<a href='http://localhost//WebHome.php' class='btn btn-primary'>Home <i class='fas fa-home'></i></a><br><br><div class=\"alert alert-info\"><strong>You have scored "+ numCorrect + " out of " + questions.length+"</strong></div>";
+
+
+ 
 
 var in1 =numCorrect;
 
@@ -103,7 +103,9 @@ $.post('db.php', { mark: in1}, function(data) {
 var submitButton = document.getElementById('submit');
 	// when user clicks submit, show results
 	submitButton.onclick = function(){
+
 		showResults(questions, quizContainer, resultsContainer);
+		
 }
 
 

@@ -205,7 +205,7 @@ a {
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <a href="http://localhost//quiz4.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <a href="http://localhost//quiz4.php" class="btn btn-success" data-dismiss="modal" role="button">Yes</a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
         
@@ -230,7 +230,7 @@ a {
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <a href="http://localhost//quiz3.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <a href="http://localhost//quiz3.php" class="btn btn-success" data-dismiss="modal" role="button">Yes</a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
         
@@ -253,7 +253,7 @@ a {
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <a href="http://localhost//quiz2.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <a href="http://localhost//quiz2.php" class="btn btn-success" data-dismiss="modal" role="button">Yes</a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
         
@@ -276,7 +276,7 @@ a {
         
         <!-- Modal footer -->
         <div class="modal-footer">
-          <a href="http://localhost//quiz1.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <a href="http://localhost//quiz1.php" class="btn btn-success" role="button" data-dismiss="modal">Yes</a>
           <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
         </div>
         

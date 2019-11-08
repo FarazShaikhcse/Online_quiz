@@ -98,7 +98,7 @@ a {
   <!-- Links -->
   <ul class="navbar-nav">
   <li class="nav-item">
-  <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Quizzer</span>
   </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <li class="nav-item"><div class="dropdown">
     <h4><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -120,7 +120,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Operating Systems</h4>
       <p class="card-text">This quiz consists of basic questions about OS</p><br>
-      <a href="http://localhost//quiz1.php" class="btn btn-primary stretched-link">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal4">attempt now</a>
     </div>
   </div>&emsp;&emsp;&emsp;&emsp;&emsp;
   <div class="card rounded shadow-lg" style="width:370px">
@@ -128,7 +128,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">MicroProcessors</h4>
       <p class="card-text">This quiz consists of basic questions about MP and assembly level language</p>
-      <a href="http://localhost//quiz2.php" class="btn btn-primary stretched-link">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal3">attempt now</a>
     </div>
   </div>
 </div><br><br>
@@ -138,7 +138,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Java</h4>
       <p class="card-text">This quiz consists of questions about programming in java</p>
-      <a href="http://localhost//quiz3.php" class="btn btn-primary stretched-link">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal2">attempt now</a>
     </div>
   </div>&emsp;&emsp;&emsp;&emsp;&emsp;
   <div class="card rounded" style="width:370px">
@@ -146,7 +146,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Python</h4>
       <p class="card-text">This quiz consists of basic questions about python programming</p>
-      <a href="http://localhost//quiz4.php" class="btn btn-primary stretched-link">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal1">attempt now</a>
     </div>
   </div>
 
@@ -157,13 +157,134 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">PHP</h4>
       <p class="card-text">This quiz consists of questions about PHP</p>
-      <a href="http://localhost//quiz5.php" class="btn btn-primary stretched-link">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal">attempt now</a>
     </div>
 </div>
 </div>
 </div>
 </center>
 <br><br></div>
+   <div class="container">
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">PHP quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz5.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+      <div class="container">
+
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Python quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz4.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+         <div class="container">
+
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Java quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz3.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+     <div class="modal" id="myModal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">MicroProcessors quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz2.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+       <div class="modal" id="myModal4">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Operating System quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz1.php" class="btn btn-success" data-dismiss="modal">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";

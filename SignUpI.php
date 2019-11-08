@@ -62,6 +62,9 @@
       return false;
     }
   }
+  $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
     </script>
 <style>
 #t2 {
@@ -116,10 +119,5 @@ background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, 
 </div>
 <div class="card-footer">
 Already have an account?<a href="http://localhost//LoginPage.php">Login</a></div></div></center></form>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();   
-});
-</script>
 </body>
 </html>

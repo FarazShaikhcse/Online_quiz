@@ -54,7 +54,7 @@ input[type="email"],input[type="password"] {
 <form action="Validp.php" method="POST" class="form-group" onsubmit="return checkForm(this);">
 <i class='fas fa-user'></i><input type="text" data-toggle="tooltip" title="Enter First Name" data-placement="bottom" id="textspe" placeholder="First Name" name="FName">&nbsp;&nbsp;<input type="text" data-toggle="tooltip" title="Enter Last Name" data-placement="bottom" id="textspe" placeholder="Last Name" name="LName"><br>
 <i class='fa fa-envelope'></i><input type="email" data-toggle="tooltip" title="Enter Email Id" data-placement="bottom" placeholder="Email Id" name="email"><br>
-<i class='fas fa-lock'></i><input type="password" data-toggle="tooltip" title="Enter Password" data-placement="bottom" id="t1" placeholder="Password" name="password"><br>
+<i class='fas fa-lock'></i><input type="password" data-toggle="tooltip" title="Enter Password" data-placement="bottom" id="t1" placeholder="Password" name="pwd1"><br>
 <i class='fas fa-lock'></i><input type="text" id="t2" data-toggle="tooltip" title="Confirm your Password" data-placement="bottom" placeholder="Confirm Password" name="pwd2"><br>
 <div class="btn-group">
 <input type="submit" class="btn btn-primary" value="Create an Account"></div>
@@ -77,39 +77,39 @@ $(document).ready(function(){
       form.email.value=w;
       return false;
     }
-    if(form.password.value == "") {
+    if(form.pwd1.value == "") {
       window.alert("Error: Pease enter the password-");
-      form.password.focus();
+      form.pwd1.focus();
       return false;
     }
     re = /^\w+$/;
-    if(form.password.value != "" && form.password.value == form.pwd2.value) {
-      if(form.password.value.length < 6) {
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
         window.alert("Error: Password must contain at least six characters!");
-        form.password.focus();
+        form.pwd1.focus();
         return false;
       }
-      if(form.password.value == form.FName.value) {
+      if(form.pwd1.value == form.FName.value) {
         window.alert("Error: Password must be different from your name!");
-        form.password.focus();
+        form.pwd1.focus();
         return false;       
       }
       re = /[0-9]/;
-      if(!re.test(form.password.value)) {
+      if(!re.test(form.pwd1.value)) {
         window.alert("Error: password must contain at least one number (0-9)!");
-        form.password.focus();
+        form.pwd1.focus();
         return false;        
       }
       re = /[a-z]/;
-      if(!re.test(form.password.value)) {
+      if(!re.test(form.pwd1.value)) {
         window.alert("Error: password must contain at least one lowercase letter (a-z)!");
-        form.password.focus();
+        form.pwd1.focus();
         return false;
       }
       re = /[A-Z]/;
-      if(!re.test(form.password.value)) {
+      if(!re.test(form.pwd1.value)) {
         window.alert("Error: password must contain at least one uppercase letter (A-Z)!");
-        form.password.focus();
+        form.pwd1.focus();
         return false;   
       }
     } else {

@@ -16,8 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
      else
      {
          header('location:SignUpI.php');
-         exit;
-        
+         exit;    
      }    
    }
    mysqli_close($d);

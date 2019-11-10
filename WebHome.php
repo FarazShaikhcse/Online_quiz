@@ -8,8 +8,8 @@
 <style>
 body{
 background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, #00c7ff, #00b9ff, #00aaff, #0099ff, #0085ff, #006eff, #0053ff, #002cff);
-
 }
+
 .card-img-top{
 height:200px;
 }
@@ -51,11 +51,9 @@ a {
   display: block;
   transition: 0.3s;
 }
-
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -63,7 +61,6 @@ a {
   font-size: 36px;
   margin-left: 50px;
 }
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -83,12 +80,12 @@ a {
   <a href="http://localhost//Profile.php" class="btn btn-dark"><center><i class="far fa-user-circle fa-3x" style="color:white;"></i></center><center>
       <?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></center></a><br>
      <center><a href='http://localhost//Leader.php' style="color:white;width:89%;text-align: center;" class="btn btn-primary">Leader Board</a></center>
-  <h1 style="color:white;">&nbsp;&nbsp;&nbsp;Exams</h1>
-  <a href="http://localhost//quiz1.php" class="btn btn-dark">Operating System</a>
-  <a href="http://localhost//quiz4.php" class="btn btn-dark">Python</a>
-  <a href="http://localhost//quiz3.php" class="btn btn-dark">Java</a>
-  <a href="http://localhost//quiz2.php" class="btn btn-dark">Microprocessor</a>
-   <a href="http://localhost//quiz5.php" class="btn btn-dark">Php</a>
+  <h1 style="color:white;">&nbsp;&nbsp;&nbsp;Exams</h1><span style="color: white;">
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal4">Operating System</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal1">Python</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal2">Java</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal3">Microprocessor</a>
+   <a class="btn btn-dark" data-toggle="modal" data-target="#myModal">Php</a></span>
  
 
 </div>
@@ -99,7 +96,7 @@ a {
   <ul class="navbar-nav">
   <li class="nav-item">
   <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Quizzer</span>
-  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <li class="nav-item"><div class="dropdown">
     <h4><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
        <?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?>
@@ -120,7 +117,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Operating Systems</h4>
       <p class="card-text">This quiz consists of basic questions about OS</p><br>
-      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal4">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal4">attempt now</button>
     </div>
   </div>&emsp;&emsp;&emsp;&emsp;&emsp;
   <div class="card rounded shadow-lg" style="width:370px">
@@ -128,7 +125,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">MicroProcessors</h4>
       <p class="card-text">This quiz consists of basic questions about MP and assembly level language</p>
-      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal3">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal3">attempt now</button>
     </div>
   </div>
 </div><br><br>
@@ -138,7 +135,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Java</h4>
       <p class="card-text">This quiz consists of questions about programming in java</p>
-      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal2">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal2">attempt now</button>
     </div>
   </div>&emsp;&emsp;&emsp;&emsp;&emsp;
   <div class="card rounded" style="width:370px">
@@ -146,7 +143,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">Python</h4>
       <p class="card-text">This quiz consists of basic questions about python programming</p>
-      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal1">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal1">attempt now</button>
     </div>
   </div>
 
@@ -157,7 +154,7 @@ a {
     <div class="card-body bg-dark text-white">
       <h4 class="card-title">PHP</h4>
       <p class="card-text">This quiz consists of questions about PHP</p>
-      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal">attempt now</a>
+      <button class="btn btn-primary stretched-link" data-toggle="modal" data-target="#myModal">attempt now</button>
     </div>
 </div>
 </div>
@@ -289,12 +286,9 @@ a {
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";
 }
-
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-   <script>
-
 </script>
 </script>
 </body>

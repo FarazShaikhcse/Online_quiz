@@ -28,6 +28,9 @@
     a {
   color: white;
 }
+span {
+  display: inline;
+}
 .sidenav {
   height: 100%;
   width: 0;
@@ -89,12 +92,13 @@ background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, 
   <a href="http://localhost//Profile.php" class="btn btn-dark"><center><i class="far fa-user-circle fa-3x" style="color:white;"></i></center><center>
       <?php echo $_SESSION['fname']." ".$_SESSION['lname']; ?></center></a><br>
      <center><a href='http://localhost//Leader.php' style="color:white;width:89%;text-align: center;" class="btn btn-primary">Leader Board</a></center>
-  <h1 style="color:white;">&nbsp;&nbsp;&nbsp;Exams</h1>
-  <a href="http://localhost//quiz1.php" class="btn btn-dark">Operating System</a>
-  <a href="http://localhost//quiz4.php" class="btn btn-dark">Python</a>
-  <a href="http://localhost//quiz3.php" class="btn btn-dark">Java</a>
-  <a href="http://localhost//quiz2.php" class="btn btn-dark">Microprocessor</a>
-   <a href="http://localhost//quiz5.php" class="btn btn-dark">Php</a>
+  <h1 style="color:white;">&nbsp;&nbsp;&nbsp;Exams</h1><span style="color: white;">
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal4">Operating System</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal1">Python</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal2">Java</a>
+  <a class="btn btn-dark" data-toggle="modal" data-target="#myModal3">Microprocessor</a>
+   <a class="btn btn-dark" data-toggle="modal" data-target="#myModal">Php</a></span>
+  
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  
   <!-- Links -->
@@ -102,7 +106,7 @@ background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, 
   <li class="nav-item">
   <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
   </li>&nbsp;&nbsp;&nbsp;&nbsp;
-  <li class="nav-item"><a href="http://localhost//WebHome.php" style="color:white;font-size:30px;cursor:pointer"><i class="fa fa-home"></i>  Home</a></li>
+  <li class="nav-item"><span><a href="http://localhost//WebHome.php" style="color:white;font-size:30px;cursor:pointer"><i class="fa fa-home"></i>  Home</a></span></li>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <li class="nav-item"><div class="dropdown">
     <h4><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -143,6 +147,127 @@ $i=0;
    mysqli_close($d);
 ?>
 </center><br><br>
+ <div class="container">
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">PHP quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz5.php" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+      <div class="container">
+
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Python quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz4.php" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+         <div class="container">
+
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Java quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz3.php" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+     <div class="modal" id="myModal3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">MicroProcessors quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz2.php" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+       <div class="modal" id="myModal4">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Operating System quiz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <p>Attempt quiz now?</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <a href="http://localhost//quiz1.php" class="btn btn-success">Yes</a>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "300px";

@@ -11,14 +11,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "INSERT INTO ATTEMPT (Userid,Examid,Mark)
-VALUES (".$_SESSION['sera']".,".$_SESSION['exam'].",$q)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Your marks has been recorded";
+$sql1 = "INSERT INTO ATTEMPT (UserId,Examid,Mark)
+VALUES (".$_SESSION['user'].",".$_SESSION['exam'].",$q)";
+$sql2 = "update DETAILS set Progress=2*(select sum(mark) from ATTEMPT where UserId=".$_SESSION['user'].") where UserId=".$_SESSION['user']."";
+if ($conn->query($sql1) === TRUE && $conn->query($sql2) === TRUE) {
+    echo $_SESSION['fname'].", your marks is ".$q;
 } else {
-    echo "Error: You have already attempted this exam!"
+    echo "Error: You have already attempted the exam";
 }
 
 $conn->close();

@@ -117,9 +117,9 @@ var time = setInterval(myTimer, 1000);
 function myTimer() {
 var min= Math.floor(sec/60);
 var secs=sec-(min*60);
-if(secs<10){
+if(secs<15 && min==0){
     
-    document.getElementById('timer').innerHTML = '<p style="color:red;"><b>0'+min + ":0" +secs+'</b></p>';
+    document.getElementById('timer').innerHTML = '<p style="color:red;font-size:30px;"><b>0'+min + ":0" +secs+'</b></p>';
 }
 else
      document.getElementById('timer').innerHTML = '0'+min + ":" +secs;

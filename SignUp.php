@@ -13,6 +13,7 @@
 background-image: linear-gradient(to right, #00ffde, #00f3ef, #00e5fb, #00d7ff, #00c7ff, #00b9ff, #00aaff, #0099ff, #0085ff, #006eff, #0053ff, #002cff);
 
 }
+
 #t2 {
   width:50%;
 }
@@ -47,7 +48,26 @@ input[type="email"],input[type="password"] {
 </style>
 </head>
 <body>
-<center><br><br>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <!-- Links -->
+  <ul class="navbar-nav">
+  <li class="nav-item">
+  <a href="http://localhost//Landing.html" style="color:white;font-size:26px;cursor:pointer" class="btn btn-dark"><i class="fas fa-home"></i>   Home</a>
+  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item">
+    <h4><a href="http://localhost//LoginPage.php" style="width: 120px;" class="btn btn-primary">
+      Sign In
+    </a>
+  </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item">
+    <h4><a href="#" style="width: 120px;" class="btn btn-primary">
+      Sign Up
+    </a>
+    </li>
+  </h4>
+  </ul>
+</nav>
+
+<center><br>
 <div class="card bg-light text-dark" style="width: 40rem;">
 <div class="card-header"><h3>Create an Acccount</h3>Fill in the form below to create an account</div>
 <div class="card-body">
@@ -60,7 +80,7 @@ input[type="email"],input[type="password"] {
 <input type="submit" class="btn btn-primary" value="Create an Account"></div>
 </div>
 <div class="card-footer">
-Already have an account?<a href="http://localhost//LoginPage.php">Login</a></div></div></center></form>
+Already have an account?<a href="http://localhost//LoginPage.php">Login</a></div></div></center></form><br><br>
 <script type="text/javascript"> 
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();   
